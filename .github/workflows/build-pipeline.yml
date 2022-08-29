@@ -28,6 +28,8 @@ jobs:
         env:
           FIRST_NAME: Maria
           LAST_NAME: Opland
+      - name: Secret
+        run: print "${{secrets.PASSWORD}}"
   deploy:
     needs: build
     runs-on: ubuntu-latest
